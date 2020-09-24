@@ -15,6 +15,7 @@ class MainClass():
         global wait
         global driver
         driver = browser
+
         wait = WebDriverWait(driver,10)
 
 
