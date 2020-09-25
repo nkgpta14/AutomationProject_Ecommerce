@@ -109,13 +109,6 @@ class ProductSelection():
                             driver.close()
                             ProductSelection(driver).clearFilter(category)
                             ProductSelection(driver).selectBrand(brand)
-                            url = driver.current_url
-                            if (not brand in url) :
-                                ProductSelection(driver).clearFilter(category)
-                                ProductSelection(driver).selectBrand(brand)
-                                print(brand + ' brand is selected')
-                            else :
-                                pass
                             ProductSelection(driver).selectionOfProduct(category,brand)
                             ProductSelection(driver).productAddition(category)
                         except:

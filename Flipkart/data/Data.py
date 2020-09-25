@@ -19,8 +19,3 @@ def readData(row_number,column_number):
     sheet = workbook.get_sheet_by_name(sheet_name)
     return (sheet.cell(row=row_number,column=column_number).value)
 
-def writeData(row_number,column_number,data):
-    workbook = openpyxl.load_workbook(path)
-    sheet = workbook.get_sheet_by_name(sheet_name)
-    sheet.cell(row=row_number,column=column_number).value=data
-    workbook.save(path)
